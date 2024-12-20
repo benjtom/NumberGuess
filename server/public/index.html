@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NumberGuess Home</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"
+        integrity="sha512-Xm9qbB6Pu06k3PUwPj785dyTl6oHxgsv9nHp7ej7nCpAqGZT3OZpsELuCYX05DdonFpTlBpXMOxjavIAIUwr0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    <div id="lobby-screen">
+        <form class="form" id="host-form">
+            <button>Start Game as Host</button>
+        </form>
+        <form class="form" id="player-form">
+            <input type="text" placeholder="Your name" id="player-name">
+            <button>Join as Player</button>
+        </form>
+        <p class="user-list"></p>
+    </div>
+    <div id="player-screen">
+        <p>Write a food that is </p>
+        <p id="secret-number"></p>
+        <p> out of 10 in your opinion.</p>
+        <form class="form" id="response-form">
+            <input type="text" placeholder="" id="response">
+            <button>Submit</button>
+        </form>
+    </div>
+    <div id="guesser-screen">
+        <p>You were chosen as the guesser! Wait for the other players to respond to their prompts...</p>
+    </div>
+    <div id="host-screen">
+        <p>Responses received:</p>
+        <p class="responded-user-list"></p>
+    </div>
+</body>
+
+</html>
